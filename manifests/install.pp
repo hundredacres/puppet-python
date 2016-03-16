@@ -50,7 +50,7 @@ class python::install {
     name   => $python,
   }
 
-  package { 'virtualenv':
+  package { "${python::version}-python-virtualenv":
     ensure  => $venv_ensure,
     require => Package['python'],
   }
