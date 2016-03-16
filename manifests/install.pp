@@ -218,7 +218,7 @@ class python::install {
       default => $python::gunicorn,
     }
 
-    package { 'gunicorn':
+    package { 'python-gunicorn':
       ensure => $gunicorn_ensure,
     }
   }
