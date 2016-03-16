@@ -91,6 +91,8 @@ define python::gunicorn (
 
   validate_re($log_level, 'debug|info|warning|error|critical', "Invalid \$log_level value ${log_level}")
 
+  ensure_resource('file', '/etc/gunicorn.d', {'ensure' => 'directory'})
+
   file { "/etc/gunicorn.d/${name}":
     ensure  => $ensure,
     mode    => '0644',
