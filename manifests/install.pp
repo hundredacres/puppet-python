@@ -183,7 +183,7 @@ class python::install {
         if ($venv_ensure != 'absent') and ($::operatingsystemrelease =~ /^6/) {
           if $python::use_epel == true {
             include 'epel'
-            Class['epel'] -> Package['virtualenv']
+            Class['epel'] -> Package['python-virtualenv']
           }
         }
 
