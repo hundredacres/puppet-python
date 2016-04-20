@@ -117,7 +117,7 @@ class python::install {
       #   ensure  => $venv_ensure,
       #   require => Package['scl-utils'],
       # }
-      package { "${python}-scldevel":
+      package { "${python}-devel":
         ensure  => $dev_ensure,
         require => Package['scl-utils'],
       }
