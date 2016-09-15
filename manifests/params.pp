@@ -17,4 +17,12 @@ class python::params {
     'Suse'   => [],
   }
   $use_epel               = true
+
+  $gunicorn_package_name = $::osfamily ? {
+    'RedHat' => 'python-gunicorn',
+    default  => 'gunicorn',
+  }
+
+  $rhscl_use_public_repository = true
+
 }
