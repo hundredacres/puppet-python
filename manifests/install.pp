@@ -61,6 +61,7 @@ class python::install {
       package { 'pip':
         ensure  => $pip_ensure,
         require => Package['python'],
+        name    => "${python}-pip",
       }
 
       package { 'python-dev':
