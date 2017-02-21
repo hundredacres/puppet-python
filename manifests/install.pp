@@ -204,7 +204,7 @@ class python::install {
         }
       }
 
-      if $::python::version =~ /^3/ {
+      if $::python::version =~ /^python3/ {
         $pip_package = 'python3-pip'
       } else {
         $pip_package = 'python-pip'
